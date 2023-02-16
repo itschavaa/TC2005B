@@ -1,40 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laboratorio 1</title>
-</head>
-<body>
-<header>
-<h1><center>chava rodríguez</center></h1>
-<p>me llamo salvador rodríguez, tengo 19 años y me gusta coleccionar funkos, el cine (me gusta demasiado) y me apasiona la tecnología; en un futuro me gustaría desempeñarme en la industria de los videojuegos o en el área de ciberseguridad.</p>
-<strong><p>a01704562</p></strong>
-</header>
-<br>
-<ul>
-  <li>¿cuál es la diferencia entre internet y la world wide web?</li>
-  <p>la www son las páginas que ves cuando estás con dispositivo en linea, el internet es la red a la que se conectan las computadoras en las que la www funciona.</p>
-  <a href="https://www.bbc.co.uk/newsround/47523993#:~:text=The%20world%20wide%20web%2C%20or,connect%20towns%20and%20cities%20together.">Fuente</a>
-  <br>
-  <li>¿cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</li>
-  <li>¿qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿por qué?</li>
-  <li>¿qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</li>
-  <li>un servidor web devuelve una respuesta HTTP con código 200. ¿qué significa esto? ¿ocurrió algún error?</li>
-  <li>¿es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿por qué?</li>
-  <li>¿es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿por qué?</li>
-  <li>¿qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</li>
-  <li>¿cuáles son las diferencias principales entre HTML 4 y HTML5?</li>
-  <li>¿qué componentes de estructura y estilo tiene una tabla?</li>
-  <li>¿cuáles son los principales controles de una forma HTML5?</li>
-  <li>¿qué tanto soporte HTML5 tiene el navegador que utilizas? puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (al responder la pregunta recuerda poner el navegador que utilizas)</li>
-  <li>sobre el ciclo de vida y desarrollo de los sistemas de información:
-    ¿cuál es el ciclo de vida de los sistemas de información?
-    ¿cuál es el ciclo de desarrollo de sistemas de información?</li>
-</ul>
-<br>
-<footer>
-  <h6>a01704562@tec.mx</h6>
-</footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio 1</title>
+  </head>
+  <body>
+    <header>
+      <h1><center>chava rodríguez</center></h1>
+      <p>
+        me llamo salvador rodríguez, tengo 19 años y me gusta coleccionar
+        funkos, el cine (me gusta demasiado) y me apasiona la tecnología; en un
+        futuro me gustaría desempeñarme en la industria de los videojuegos o en
+        el área de ciberseguridad.
+      </p>
+      <strong><p>a01704562</p></strong>
+    </header>
+    <br />
+    <ul>
+      <li>¿cuál es la diferencia entre internet y la world wide web?</li>
+      <p>
+        la www son las páginas que ves cuando estás con dispositivo en linea, el
+        internet es la red a la que se conectan las computadoras en las que la
+        www funciona.
+      </p>
+      <li>
+        ¿cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
+        DELETE?
+      </li>
+      <ul>
+        <li>GET: obtener paquete</li>
+        <li>HEAD: obtener los headers</li>
+        <li>POST: envio de datos al servidor</li>
+        <li>PUT: envio de datos al servidor para reemplazar paquete</li>
+        <li>PATCH: envio de datos al servidor para modificar paquete</li>
+        <li>DELETE: eliminar paquete</li>
+      </ul>
+      <li>
+        ¿qué método HTTP se debe utilizar al enviar un formulario HTML, por
+        ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿por
+        qué?
+      </li>
+      <p>POST, porque se encarga de mandar datos al servidor</p>
+      <li>
+        ¿qué método HTTP se utiliza cuando a través de un navegador web se
+        accede a una página a través de un URL?
+      </li>
+      <p>GET</p>
+      <li>
+        un servidor web devuelve una respuesta HTTP con código 200. ¿qué
+        significa esto? ¿ocurrió algún error?
+      </li>
+      <p>que la respuesta fue obtenida de manera exitosa, no hay error</p>
+      <li>
+        ¿es responsabilidad del desarrollador corregir un sitio web si un
+        usuario reporta que intentó acceder al sitio y se encontró con un error
+        404? ¿por qué?
+      </li>
+      <p>
+        sí, en este caso el error el menciona que el usuario fue incapaz de
+        acceder al sitio principal
+      </p>
+      <li>
+        ¿es responsabilidad del desarrollador corregir un sitio web si un
+        usuario reporta que intentó acceder al sitio y se encontró con un error
+        500? ¿por qué?
+      </li>
+      <p>sí, el error menciona que hubo un problema al cargar el sitio</p>
+      <li>
+        ¿qué significa que un atributo HTML5 esté depreciado o desaprobado
+        (deprecated)? menciona algunos elementos de HTML 4 que en HTML5 estén
+        desaprobados.
+      </li>
+      <p>
+        que dicho atributo ya no recibira soporte, por lo cual no se deberá de
+        utilizar, ej., shape y coords
+      </p>
+      <li>¿cuáles son las diferencias principales entre HTML 4 y HTML5?</li>
+      <p>
+        se desaprobaron bastantes atributos y se añadieron los elementos
+        semánticos
+      </p>
+      <li>¿qué componentes de estructura y estilo tiene una tabla?</li>
+      <p>
+        atributos como: tr, td, thead, tbody, tfoot, caption, colgroup, col,
+        etc.
+      </p>
+      <li>¿cuáles son los principales controles de una forma HTML5?</li>
+      <p>text, checkbox, date, search, submit, button, password, etc.</p>
+      <li>
+        ¿qué tanto soporte HTML5 tiene el navegador que utilizas? puedes
+        utilizar la siguiente página para descubrirlo: http://html5test.com/ (al
+        responder la pregunta recuerda poner el navegador que utilizas)
+      </li>
+      <p>Opera GX, tiene 474 puntos de 555 puntos</p>
+      <li>
+        sobre el ciclo de vida y desarrollo de los sistemas de información:
+        ¿cuál es el ciclo de vida de los sistemas de información? ¿cuál es el
+        ciclo de desarrollo de sistemas de información?
+      </li>
+      <p>
+        el ciclo de vida de un sistema habla desde que este esta en despligue
+        hasta el último día de este, el de desarrollo no habla del momento en
+        que surge la idea hasta el despligue
+      </p>
+    </ul>
+    <br />
+    <footer>
+      <h6>a01704562@tec.mx</h6>
+      <p>
+        Visual Studio Code.
+        <a href="https://code.visualstudio.com/"
+          >https://code.visualstudio.com/</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
