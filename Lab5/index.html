@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <center>
+        <div>
+          <h1 id="nombre"><center>chava rodríguez</center></h1>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="/Lab5/img/yo.png"
+              alt="Este soy yo"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                me llamo salvador rodríguez, tengo 19 años y me gusta
+                coleccionar funkos, el cine (me gusta demasiado) y me apasiona
+                la tecnología; en un futuro me gustaría desempeñarme en la
+                industria de los videojuegos o en el área de ciberseguridad.
+              </p>
+            </div>
+          </div>
+          <p id="info"></p>
+          <p id="matri">a01704562</p>
+        </div>
+      </center>
+    </header>
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action" href="#list-item-1"
+        >¿cuál es la diferencia entre internet y la world wide web?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-2"
+        >¿cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
+        DELETE?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-3"
+        >¿qué método HTTP se debe utilizar al enviar un formulario HTML, por
+        ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿por
+        qué?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-4"
+        >¿qué método HTTP se utiliza cuando a través de un navegador web se
+        accede a una página a través de un URL?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-5"
+        >un servidor web devuelve una respuesta HTTP con código 200. ¿qué
+        significa esto? ¿ocurrió algún error?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-6"
+        >¿es responsabilidad del desarrollador corregir un sitio web si un
+        usuario reporta que intentó acceder al sitio y se encontró con un error
+        404? ¿por qué?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-7"
+        >¿es responsabilidad del desarrollador corregir un sitio web si un
+        usuario reporta que intentó acceder al sitio y se encontró con un error
+        500? ¿por qué?</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-8"
+        >¿qué significa que un atributo HTML5 esté depreciado o desaprobado
+        (deprecated)? menciona algunos elementos de HTML 4 que en HTML5 estén
+        desaprobados</a
+      >
+      <a class="list-group-item list-group-item-action" href="#list-item-9"
+        >¿cuáles son las diferencias principales entre HTML 4 y HTML5?
+      <a class="list-group-item list-group-item-action" href="#list-item-10"
+        >¿qué componentes de estructura y estilo tiene una tabla?</a
+      >
+    </div>
+    <div
+      data-spy="scroll"
+      data-target="#list-example"
+      data-offset="0"
+      class="scrollspy-example"
+    >
+      <h4 id="list-item-1">
+        ¿cuál es la diferencia entre internet y la world wide web?
+      </h4>
+      <p>
+        la www son las páginas que ves cuando estás con dispositivo en linea, el
+        internet es la red a la que se conectan las computadoras en las que la
+        www funciona.
+      </p>
+      <h4 id="list-item-2">
+        ¿cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
+        DELETE?
+      </h4>
+      <ul>
+        <li class="respuesta">HEAD: obtener los headers</li>
+        <li class="respuesta">GET: obtener paquete</li>
+        <li class="respuesta">POST: envio de datos al servidor</li>
+        <li class="respuesta">
+          PUT: envio de datos al servidor para reemplazar paquete
+        </li>
+        <li class="respuesta">
+          PATCH: envio de datos al servidor para modificar paquete
+        </li>
+        <li class="respuesta">DELETE: eliminar paquete</li>
+      </ul>
+      <h4 id="list-item-3">
+        ¿qué método HTTP se debe utilizar al enviar un formulario HTML, por
+        ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿por
+        qué?
+      </h4>
+      <p>POST, porque se encarga de mandar datos al servidor</p>
+      <h4 id="list-item-4">
+        ¿qué método HTTP se utiliza cuando a través de un navegador web se
+        accede a una página a través de un URL?
+      </h4>
+      <p>GET</p>
+      <h4 id="list-item-5">
+        un servidor web devuelve una respuesta HTTP con código 200. ¿qué
+        significa esto? ¿ocurrió algún error?
+      </h4>
+      <p>que la respuesta fue obtenida de manera exitosa, no hay error</p>
+      <h4 id="list-item-6">
+        ¿es responsabilidad del desarrollador corregir un sitio web si un
+        usuario reporta que intentó acceder al sitio y se encontró con un error
+        404? ¿por qué?
+      </h4>
+      <p>
+        sí, en este caso el error el menciona que el usuario fue incapaz de
+        acceder al sitio principal
+      </p>
+      <h4 id="list-item-7">
+        ¿es responsabilidad del desarrollador corregir un sitio web si un
+        usuario reporta que intentó acceder al sitio y se encontró con un error
+        500? ¿por qué?
+      </h4>
+      <p>sí, el error menciona que hubo un problema al cargar el sitio</p>
+      <h4 id="list-item-8">
+        ¿qué significa que un atributo HTML5 esté depreciado o desaprobado
+        (deprecated)? menciona algunos elementos de HTML 4 que en HTML5 estén
+        desaprobados.
+      </h4>
+      <p>que dicho atributo ya no recibira soporte, por lo cual no se deberá de
+        utilizar, ej., shape y coords</p>
+      <h4 id="list-item-9">
+        ¿cuáles son las diferencias principales entre HTML 4 y HTML5?
+      </h4>
+      <p>se desaprobaron bastantes atributos y se añadieron los elementos
+        semánticos</p>
+      <h4 id="list-item-10">
+        ¿qué componentes de estructura y estilo tiene una tabla?
+      </h4>
+      <p>atributos como: tr, td, thead, tbody, tfoot, caption, colgroup, col,
+        etc.</p>
+    </div>
+    <footer>
+      a01704562@tec.mx Visual Studio Code.
+      <a href="https://code.visualstudio.com/"
+        >https://code.visualstudio.com/</a
+      >
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
