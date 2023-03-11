@@ -74,7 +74,7 @@ const server = http.createServer((request, response) => {
         </select>
       </div>
       <br>
-      <button type="submit" class="btn btn-primary">Pedir</button>
+      <button type="submit" class="btn btn-primary" method="POST">Pedir</button>
     </form>
   <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -102,6 +102,7 @@ const server = http.createServer((request, response) => {
     return request.on('end', () => {
       const datos_completos = Buffer.concat(datos).toString();
       console.log(datos_completos);
+      console.log("Hola");
     });
     response.setHeader("Content-Type", "text/html");
     response.write();
