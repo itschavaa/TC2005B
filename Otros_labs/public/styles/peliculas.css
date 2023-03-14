@@ -1,0 +1,46 @@
+html {
+  background-color: rgb(224, 224, 221);
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "pel1 pel2 pel3 pel4"
+    "pel5 pel6 pel7 pel8";
+}
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: pel1;
+  margin-left: 3rem;
+}
+.item3 {
+  grid-area: pel2;
+  margin-left: 3rem;
+}
+.item4 {
+  grid-area: pel3;
+  margin-left: 3rem;
+}
+.item5 {
+  grid-area: pel4;
+  margin-left: 3rem;
+}
+.item6 {
+  grid-area: pel5;
+  margin-left: 3rem;
+}
+.item7 {
+  grid-area: pel6;
+  margin-left: 3rem;
+}
+.item8 {
+  grid-area: pel7;
+  margin-left: 3rem;
+}
+.item9 {
+  grid-area: pel8;
+  margin-left: 3rem;
+}

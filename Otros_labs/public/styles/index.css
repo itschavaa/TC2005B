@@ -1,0 +1,18 @@
+html{
+  background-color: rgb(224, 224, 221);
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main main'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+}
+.grid-container > div {
+  text-align: center;
+}
+
+.item1 { grid-area: header; }
+.item3 { grid-area: main; }
+.item5 { grid-area: footer; }

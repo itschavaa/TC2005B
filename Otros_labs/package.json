@@ -1,17 +1,14 @@
 {
-  "name": "lab11",
+  "name": "otros_labs",
   "version": "1.0.0",
-  "description": "Ejemplos Chava Rodríguez TC2005B",
-  "main": "app.js",
+  "description": "Laboratorios TC2005B",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Salvador Rodriguez",
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2"

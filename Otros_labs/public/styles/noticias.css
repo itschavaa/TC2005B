@@ -1,0 +1,19 @@
+html {
+  background-color: rgb(224, 224, 221);
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "noti noti noti noti"
+    "noti noti noti noti";
+}
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: noti;
+  background-color: rgb(224, 224, 221);
+}
+
