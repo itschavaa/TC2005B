@@ -1,74 +1,43 @@
 const express = require('express');
 const { readFile } = require('fs');
+const path = require('path')
 
 const router = express.Router();
+const videos = {
+  EEAAO:"https://www.youtube.com/embed/wxN1T1uxQ2g",
+  close: "https://www.youtube.com/embed/_D8a6XG8Do4",
+  avatar: "https://www.youtube.com/embed/a8Gx8wiNbs8",
+  wt:"https://www.youtube.com/embed/pD0mFhMqDCE"
+
+}
 
 router.get('/boletos', (request, response, next) => {
-  readFile('./pages/boletos.html','utf-8' , (err, html) => {
-    if(err)
-      throw err
-    response.send(html); 
-  })
+  response.render('boletos')
 });
 router.post('/boletos', (request, response, next) => {
-  console.log(request.body)
-  if(request.body.peliculas === "avatar") {
-    response.setHeader('Content-Type', 'text/html');
-    response.write(`<!DOCTYPE html>
-      <html>
-      <head><meta charset="utf-8"></head><body>
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-        crossorigin="anonymous"
-      />`);
-    response.write("<center> <h2> Hola "+ request.body.nombre + ", gracias por comprar " + request.body.boletos + " boleto/boletos (: </h2></center><br>");
-    response.write('<center><iframe width="560" height="315" src="https://www.youtube.com/embed/a8Gx8wiNbs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><center>');
+  if (request.body.peliculas=="EEAAO"){
+    var url=videos.EEAAO;
+    var nombre = "Everything Everywhere All At Once"
+  } else if (request.body.peliculas=="Close"){
+    var url=videos.close;
+    var nombre = "Close"
+  } else if (request.body.peliculas=="WomenTalking"){
+    var url=videos.wt;
+    var nombre = "Women Talking"
+  } else if (request.body.peliculas=="avatar"){
+    var url=videos.avatar;
+    var nombre = "Avatar: The Way of the Water"
   }
-    else if (request.body.peliculas == "EEAAO"){
-      response.setHeader('Content-Type', 'text/html');
-      response.write(`<!DOCTYPE html>
-        <html>
-        <head><meta charset="utf-8"></head><body>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous"
-        />`);
-      response.write("<center> <h2> Hola "+ request.body.nombre + ", gracias por comprar " + request.body.boletos + " boleto/boletos (: </h2></center><br>");
-      response.write('<center><iframe width="560" height="315" src="https://www.youtube.com/embed/wxN1T1uxQ2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><center>');
-      return response.end();
 
-
-    } else if (request.body.peliculas == "Close"){
-        response.write(`<!DOCTYPE html>
-        <html>
-        <head><meta charset="utf-8"></head><body>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous"
-        />`);
-      response.write("<center> <h2> Hola "+ request.body.nombre + ", gracias por comprar " + request.body.boletos + " boleto/boletos (: </h2></center><br>");
-      response.write('<center><iframe width="560" height="315" src="https://www.youtube.com/embed/_D8a6XG8Do4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><center>');
-      return response.end();
-    } 
-    else if (request.body.peliculas == "WomenTalking"){
-        response.write(`<!DOCTYPE html>
-        <html>
-        <head><meta charset="utf-8"></head><body>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous"
-        />`);
-      response.write("<center> <h2> Hola "+ request.body.nombre + ", gracias por comprar " + request.body.boletos + " boleto/boletos (: </h2></center><br>");
-      response.write('<center><iframe width="560" height="315" src="https://www.youtube.com/embed/pvAJAnKHC1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><center>');
-      return response.end();
-  }});
+  if (request.body.boletos>1){
+    var tex = "Tus boletos"
+    var bol = "boletos"
+  } else {
+    var tex = "Tu boleto"
+    var bol = "boleto"
+  }
+  response.render('boletos_post', {nombre:request.body.nombre, peli:url, cantidad:request.body.boletos, peliNom:nombre, boletos:bol, texto:tex})
+  console.log(request.body);
+});
 
 module.exports = router;

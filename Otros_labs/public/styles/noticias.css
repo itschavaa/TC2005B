@@ -17,3 +17,13 @@ html {
   background-color: rgb(224, 224, 221);
 }
 
+.form-group{
+  padding: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.field{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
