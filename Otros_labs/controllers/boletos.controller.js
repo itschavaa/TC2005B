@@ -7,7 +7,12 @@ const videos = {
 };
 
 exports.getBoletos = (request, response, next) => {
+  const cookies = request.get('Cookie') || ''
+  let consultas = cookies.split('=')[1] || 0;
+  consultas ++;
+  response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
   response.render("boletos");
+  
 };
 
 exports.postBoletos = (request, response, next) => {
@@ -15,7 +20,6 @@ exports.postBoletos = (request, response, next) => {
     cantidad : request.body.boletos,
     name: request.body.nombre
   });
-  ;
   if (request.body.peliculas == "EEAAO") {
     ticket.url = videos.EEAAO;
     ticket.peliNombre = "Everything Everywhere All At Once";
@@ -39,6 +43,9 @@ exports.postBoletos = (request, response, next) => {
   }
   
   ticket.save();
+  request.session.ultima_pelicula = ticket.peliNombre;
+
+
   console.log(ticket);
 
   response.render("boletos_post", {
@@ -48,5 +55,8 @@ exports.postBoletos = (request, response, next) => {
     peliNom: ticket.peliNombre,
     boletos: ticket.boletos,
     texto: ticket.texto,
+    ultima_pelicula: request.session.ultima_pelicula || '',
   });
+
+  
 };

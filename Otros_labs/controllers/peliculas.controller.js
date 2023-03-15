@@ -1,5 +1,5 @@
 exports.getIndex = (request, response, next) => {
-  response.render('index')
+  response.render('index',{ultima_pelicula: request.session.ultima_pelicula})
 };
 
 exports.getPeliculas = (request, response, next) => {

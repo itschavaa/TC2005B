@@ -121,6 +121,11 @@
             <a href="/nosotros" class="btn btn-primary">Nosotros</a>
           </div>
           <div class="card-footer text-muted">Laboratorios despues del 10.</div>
+          <% if (ultima_pelicula != '') { %>
+            <div class="alert alert-danger" role="alert">
+              El última pelicula vista fue: <%= ultima_pelicula %>
+            </div>
+          <% } %>
         </div>
       </div>
     </div>
