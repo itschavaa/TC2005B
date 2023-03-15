@@ -1,22 +1,12 @@
 const express = require('express');
-const { readFile } = require('fs');
-const path = require('path')
-
+const peliculasController = require('../controllers/peliculas.controller')
 const router = express.Router();
 
-router.get('/', (request, response, next) => {
-  response.render('index')
-});
+router.get('/', peliculasController.getIndex);
 
-router.get('/peliculas', (request, response, next) => {
-  response.render('peliculas')
-});
+router.get('/peliculas', peliculasController.getPeliculas);
 
-router.get('/noticias', (request, response, next) => {
-  response.render('noticias')
-});
+router.get('/noticias', peliculasController.getNoticias);
 
-router.get('/nosotros', (request, response, next) => {
-  response.render('nosotros')
-});
+router.get('/nosotros', peliculasController.getNosotros);
 module.exports = router;
