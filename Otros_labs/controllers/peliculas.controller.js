@@ -1,3 +1,5 @@
+const Noticia = require("../models/noticias.model");
+
 exports.getIndex = (request, response, next) => {
   response.render('index',{ultima_pelicula: request.session.ultima_pelicula})
 };
@@ -12,4 +14,15 @@ exports.getNoticias = (request, response, next) => {
 
 exports.getNosotros = (request, response, next) => {
   response.render('nosotros')
+};
+
+exports.getCrearNoticia = (request, response, next) => {
+  response.render('crearNoticia')
+};
+
+exports.insertarNoticia = (request, response, next) => {
+  const noticias = new Noticia(request.body.titulo, request.body.texto);
+  noticias.save().then(() => {
+      response.redirect('/');
+  }).catch(err => console.log(err));
 };

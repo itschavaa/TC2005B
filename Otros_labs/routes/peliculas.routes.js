@@ -10,4 +10,9 @@ router.get('/noticias', peliculasController.getNoticias);
 
 router.get('/nosotros', peliculasController.getNosotros);
 
+router.get('/crearNoticia', peliculasController.getCrearNoticia);
+
+router.post('/crearNoticia', peliculasController.insertarNoticia);
+
+
 module.exports = router;
