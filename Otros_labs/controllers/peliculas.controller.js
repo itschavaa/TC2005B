@@ -21,7 +21,10 @@ exports.getCrearNoticia = (request, response, next) => {
 };
 
 exports.insertarNoticia = (request, response, next) => {
-  const noticias = new Noticia(request.body.titulo, request.body.texto);
+  const noticias = new Noticia({
+    titulo: request.body.titulo, 
+    texto: request.body.texto,
+  });
   noticias.save().then(() => {
       response.redirect('/');
   }).catch(err => console.log(err));
