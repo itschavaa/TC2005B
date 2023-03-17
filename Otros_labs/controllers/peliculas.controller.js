@@ -9,8 +9,15 @@ exports.getPeliculas = (request, response, next) => {
 };
 
 exports.getNoticias = (request, response, next) => {
-  response.render('noticias')
+  Noticia.fetchAll()
+  .then(([rows, fieldData]) => {
+      response.render('noticias', {
+          data: rows 
+      })
+  })
+  .catch(err => console.log(err))
 };
+
 
 exports.getNosotros = (request, response, next) => {
   response.render('nosotros')
@@ -29,3 +36,4 @@ exports.insertarNoticia = (request, response, next) => {
       response.redirect('/');
   }).catch(err => console.log(err));
 };
+
