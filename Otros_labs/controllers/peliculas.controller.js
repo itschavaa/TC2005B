@@ -28,9 +28,11 @@ exports.getCrearNoticia = (request, response, next) => {
 };
 
 exports.insertarNoticia = (request, response, next) => {
+    console.log(request.file);
   const noticias = new Noticia({
     titulo: request.body.titulo, 
     texto: request.body.texto,
+      imagen: request.file.filename,
   });
   noticias.save().then(() => {
       response.redirect('/');

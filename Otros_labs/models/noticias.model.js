@@ -5,6 +5,7 @@ module.exports = class Noticia {
   constructor(nuevaNoticia){
     this.titulo = nuevaNoticia.titulo || '';
     this.texto = nuevaNoticia.texto || '';
+    this.imagen = nuevaNoticia.imagen || "noticia.jpg";
   }
 
   save() {
