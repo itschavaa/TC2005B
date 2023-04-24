@@ -39,3 +39,10 @@ exports.insertarNoticia = (request, response, next) => {
   }).catch(err => console.log(err));
 };
 
+exports.api = (request, response, next) => {
+    response.render('api');
+};
+
+exports.graficas = (request, response, next) => {
+    response.render('graficas')
+};

@@ -4,6 +4,10 @@ const router = express.Router();
 
 router.get('/', peliculasController.getIndex);
 
+router.get('/api', peliculasController.api);
+
+router.get('/graficas', peliculasController.graficas);
+
 router.get('/peliculas', peliculasController.getPeliculas);
 
 router.get('/noticias', peliculasController.getNoticias);
