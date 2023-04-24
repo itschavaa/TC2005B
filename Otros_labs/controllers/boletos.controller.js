@@ -15,48 +15,9 @@ exports.getBoletos = (request, response, next) => {
   
 };
 
-exports.postBoletos = (request, response, next) => {
-  const ticket = new Ticket({
-    cantidad : request.body.boletos,
-    name: request.body.nombre
-  });
-  if (request.body.peliculas == "EEAAO") {
-    ticket.url = videos.EEAAO;
-    ticket.peliNombre = "Everything Everywhere All At Once";
-  } else if (request.body.peliculas == "Close") {
-    ticket.url = videos.close;
-    ticket.peliNombre = "Close";
-  } else if (request.body.peliculas == "WomenTalking") {
-    ticket.url = videos.wt;
-    ticket.peliNombre = "Women Talking";
-  } else if (request.body.peliculas == "avatar") {
-    ticket.url = videos.avatar;
-    ticket.peliNombre = "Avatar: The Way of the Water";
-  }
-
-  if (request.body.boletos > 1) {
-    ticket.texto = "Tus boletos";
-    ticket.boletos = "boletos";
-  } else {
-    ticket.texto = "Tu boleto";
-    ticket.boletos = "boleto";
-  }
-  
-  ticket.save();
-  request.session.ultima_pelicula = ticket.peliNombre;
-
-
-  console.log(ticket);
-
-  response.render("boletos_post", {
-    nombre: ticket.name,
-    peli: ticket.url,
-    cantidad: ticket.cantidad,
-    peliNom: ticket.peliNombre,
-    boletos: ticket.boletos,
-    texto: ticket.texto,
-    ultima_pelicula: request.session.ultima_pelicula || '',
-  });
+exports.postBoletos = async (req, res, next) => {
+  console.log(req.body);
+  res.json(':)');
 
   
 };

@@ -23,7 +23,7 @@
       <div class="item2">
         <br>
         <center><h2>Peliculas</h2></center>
-        <form action="/boletos" method="POST">
+        <form id="form-boletos" action="/boletos" method="POST">
           <fieldset class="field">
             <legend><h3>¿Que pelicula quieres ver?</h3></legend>
             <div class="form-check">
@@ -85,7 +85,7 @@
           <br />
           <div class="form-group">
             <label for="boletos">Boletos:</label>
-            <select class="form-control" id="selectBoletos" name="boletos">
+            <select class="form-control" id="selectBoletos" name="boletos" form="form-boletos">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -99,9 +99,10 @@
             </select>
           </div>
           <br />
-          <center><button type="submit" class="btn btn-primary">Comprar</button><br /></center>
+          <center><button type="button" class="btn btn-primary" onclick="boletosPost()">Comprar</button><br /></center>
         </form>
       </div>
     </div>
   </body>
+<script src="scripts/boletos.js"></script>
 </html>
