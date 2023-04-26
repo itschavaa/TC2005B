@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafica</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="100px" height="100px"></canvas>
+</body>
+<script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx,{
+        type: 'line',
+        data:{
+            labels: [0, 1, 2, 3, 4, 5, 6, 7],
+            datasets:[
+                {
+                    label:'Goal Points',
+                    data: [0, 11, 21, 32, 43, 54, 64, 75],
+                    borderColor://azul marino
+                        'rgb(1, 41, 95)'
+                },
+                {
+                    label:'Points Done',
+                    data:[0, 4, 12, 15, 33, 38, 58, 75],
+                    borderColor://tverde olivo
+                        'rgb(132,147,36)'
+
+                },
+                {
+                    label:'Scope Points',
+                    data:[67, 67, 67, 67, 67, 72, 75, 75],
+                    borderColor://azul teal
+                        'rgb(67,127,151)'
+                }
+            ]
+        },
+    });
+</script>
+</html>
